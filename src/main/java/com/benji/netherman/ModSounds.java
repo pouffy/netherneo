@@ -19,7 +19,7 @@ public class ModSounds {
 
     public static final DeferredHolder<SoundEvent, SoundEvent> BLACKSMITH_IDLE = registerSoundEvent("blacksmith_idle");
     public static final DeferredHolder<SoundEvent, SoundEvent> RIFTSOUND = registerSoundEvent("riftsound");
-
+//test
     public static final DeferredHolder<SoundEvent, SoundEvent> AZAZEL_VOICE = registerSoundEvent("azazel_voice");
     public static final DeferredHolder<SoundEvent, SoundEvent> CLOCK = registerSoundEvent("clock");
     public static final DeferredHolder<SoundEvent, SoundEvent> WHISPER = registerSoundEvent("whisper");
