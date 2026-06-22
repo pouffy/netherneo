@@ -1,0 +1,61 @@
+package com.benji.netherman.client;
+
+import com.benji.netherman.NetherExp;
+import net.minecraft.util.Mth;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+
+@EventBusSubscriber(modid = NetherExp.MODID, value = net.neoforged.api.distmarker.Dist.CLIENT)
+public class ClientFogHandler {
+
+    public static boolean isInsideMansion = false;
+    private static float fogProgress = 0.0f;
+
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        if (isInsideMansion && fogProgress < 1.0f) {
+            fogProgress += 0.01f;
+        } else if (!isInsideMansion && fogProgress > 0.0f) {
+            fogProgress -= 0.01f;
+        }
+        fogProgress = Mth.clamp(fogProgress, 0.0f, 1.0f);
+    }
+
+    @SubscribeEvent
+    public static void onFogColor(ViewportEvent.ComputeFogColor event) {
+        if (fogProgress > 0.0f) {
+            float targetRed = 0.6f;
+            float targetGreen = 0.0f;
+            float targetBlue = 0.02f;
+
+            event.setRed(Mth.lerp(fogProgress, event.getRed(), targetRed));
+            event.setGreen(Mth.lerp(fogProgress, event.getGreen(), targetGreen));
+            event.setBlue(Mth.lerp(fogProgress, event.getBlue(), targetBlue));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onRenderFog(ViewportEvent.RenderFog event) {
+        if (fogProgress > 0.0f) {
+
+            float targetFarPlane = 48.0f; 
+            float targetNearPlane = 12.0f; 
+
+            float currentFar = event.getFarPlaneDistance();
+            float currentNear = event.getNearPlaneDistance();
+
+            event.setNearPlaneDistance(
+                    Mth.lerp(fogProgress, currentNear, targetNearPlane));
+
+            event.setFarPlaneDistance(
+                    Mth.lerp(fogProgress, currentFar, targetFarPlane));
+
+            event.setCanceled(true);
+        }
+    }
+}
