@@ -666,7 +666,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
         }
         this.prisonBlocks.clear();
     }
-    
+    //test commit
     private int getHighestPrisonBlock() {
         if (this.prisonBlocks.isEmpty()) return this.prisonCenter != null ? this.prisonCenter.getY() : 0;
         int highest = this.prisonBlocks.get(0).getY();
