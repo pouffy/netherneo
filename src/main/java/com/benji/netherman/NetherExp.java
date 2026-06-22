@@ -539,7 +539,7 @@ public class NetherExp {
 
     public static final DeferredBlock<Block> TOTEMUS = BLOCKS.register("totemus",
             () -> new TotemusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)
-                    .strength(5.0F)
+                    .strength(6.0F)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()));
 
