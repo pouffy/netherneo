@@ -2,10 +2,12 @@ package com.benji.netherman.item;
 
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.ModSounds;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -31,11 +33,22 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class ManipulatorStickItem extends SwordItem {
 
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        Component manipulator = Component.translatable("tooltip.netherman.manipulator")
+                .withStyle(ChatFormatting.WHITE);
+
+        tooltipComponents.add(Component.translatable("tooltip.netherman.manipulator.line1", manipulator)
+                .withStyle(ChatFormatting.GOLD));
+
+        tooltipComponents.add(manipulator);
+    }
 
     public ManipulatorStickItem() {
         

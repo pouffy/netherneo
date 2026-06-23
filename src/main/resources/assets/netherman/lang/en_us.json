@@ -58,6 +58,19 @@
 
   "creativetab.netherman_tab": "Cult of Azazel",
 
+  "block.netherman.grand_door_part": "Grand Door Part",
+  "tooltip.netherman.compass": "Helps you find mod structures",
+  "tooltip.netherman.guide": "Guidebook",
+  "tooltip.netherman.trophy": "Contains 3 Totem of Undying",
+  "tooltip.netherman.trophy.line1": "Fire immune",
+  "tooltip.netherman.manipulator": "[RMB] for pulling",
+  "tooltip.netherman.manipulator.line1": "[SHIFT+RMB] for summon",
+  "tooltip.netherman.arrow": "Ricochet arrow",
+  "tooltip.netherman.honey": "[RMB] on honey block",
+  "tooltip.netherman.chance_totem.spawnpoint": "spawnpoint",
+  "tooltip.netherman.chance_totem.line1": "Teleports to the %s after fatal hit",
+  "tooltip.netherman.chance_totem.line2": "[SHIFT+RMB] - summon Gehinnom",
+
   "entity.netherman.welcomer": "Welcomer",
   "entity.netherman.believer_villager": "Preacher",
   "entity.netherman.trader": "Trader",

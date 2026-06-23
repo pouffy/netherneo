@@ -40,7 +40,7 @@ public class LabyrinthTeleportBlockEntity extends BlockEntity {
             int guessedAltars = 0;
 
             int radius = 5;
-            
+
             for (int x = -radius; x <= radius; x++) {
                 for (int y = -radius; y <= radius; y++) {
                     for (int z = -radius; z <= radius; z++) {
