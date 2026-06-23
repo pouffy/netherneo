@@ -39,11 +39,14 @@ public class LabyrinthTeleportBlockEntity extends BlockEntity {
             int totalAltars = 0;
             int guessedAltars = 0;
 
-            for (int x = -20; x <= 20; x++) {
-                for (int y = -20; y <= 20; y++) {
-                    for (int z = -20; z <= 20; z++) {
+            int radius = 5;
+            
+            for (int x = -radius; x <= radius; x++) {
+                for (int y = -radius; y <= radius; y++) {
+                    for (int z = -radius; z <= radius; z++) {
                         BlockPos checkPos = pos.offset(x, y, z);
                         BlockState neighbor = level.getBlockState(checkPos);
+
                         if (neighbor.is(NetherExp.ALTAR.get())) {
                             totalAltars++;
                             if (neighbor.getValue(AltarBlock.GUESSED)) {
@@ -53,6 +56,8 @@ public class LabyrinthTeleportBlockEntity extends BlockEntity {
                     }
                 }
             }
+
+            // ... остальной код (newMode и т.д.) ...
 
             int newMode = 0;
             if (totalAltars == 0) {

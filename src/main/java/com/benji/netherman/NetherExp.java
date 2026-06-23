@@ -579,7 +579,7 @@ public class NetherExp {
 
     public static final DeferredBlock<Block> ALTAR = BLOCKS.register("altar",
             () -> new AltarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)
-                    .lightLevel(state -> state.getValue(AltarBlock.LIT) ? 10 : 0)
+                    .lightLevel(state -> state.getValue(AltarBlock.LIT) ? 15 : 0)
                     .strength(10.0F)
                     .requiresCorrectToolForDrops()
                     .noOcclusion()));
