@@ -3,7 +3,7 @@ package com.benji.netherman.client.renderer;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.client.layer.GenericEmissiveLayer;
 import com.benji.netherman.client.model.GrandDoorModel;
-import com.benji.netherman.block.entity.GrandDoorBlockEntity;
+import com.benji.netherman.common.block.entity.GrandDoorBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.AABB;
@@ -14,7 +14,7 @@ public class GrandDoorRenderer extends GeoBlockRenderer<GrandDoorBlockEntity> {
         super(new GrandDoorModel());
 
         
-        addRenderLayer(new GenericEmissiveLayer<>(this, ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "textures/block/grand_door_emissive.png")));
+        addRenderLayer(new GenericEmissiveLayer<>(this, NetherExp.location("textures/block/grand_door_emissive.png")));
     }
 
     @Override

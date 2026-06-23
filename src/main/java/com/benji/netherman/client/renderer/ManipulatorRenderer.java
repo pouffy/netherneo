@@ -3,7 +3,7 @@ package com.benji.netherman.client.renderer;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.client.model.ManipulatorModel;
 import com.benji.netherman.client.layer.GenericEmissiveLayer; 
-import com.benji.netherman.entity.ManipulatorEntity;
+import com.benji.netherman.common.entity.ManipulatorEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
@@ -13,6 +13,6 @@ public class ManipulatorRenderer extends GeoEntityRenderer<ManipulatorEntity> {
         super(renderManager, new ManipulatorModel());
 
         
-        addRenderLayer(new GenericEmissiveLayer<>(this, ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "textures/entity/manipulator_emissive.png")));
+        addRenderLayer(new GenericEmissiveLayer<>(this, NetherExp.location("textures/entity/manipulator_emissive.png")));
     }
 }
