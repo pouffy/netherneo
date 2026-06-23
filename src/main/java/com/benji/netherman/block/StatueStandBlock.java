@@ -29,8 +29,6 @@ public class StatueStandBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<StatueStandBlock> CODEC = simpleCodec(StatueStandBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
-    private static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
-
     private static final VoxelShape SHAPE_LOWER = Shapes.or(Block.box(0, 0, 0, 16, 7, 16), Block.box(2, 7, 2, 14, 12, 14), Block.box(5, 12, 5, 11, 23, 11));
     private static final VoxelShape SHAPE_UPPER = Shapes.or(Block.box(3, 0, 3, 13, 11, 13), Block.box(5, 11, 5, 11, 23, 11));
     private static final VoxelShape SHAPE_UPPER_NORTH = Shapes.or(SHAPE_UPPER, Block.box(3, 11, 3, 13, 25, 7));

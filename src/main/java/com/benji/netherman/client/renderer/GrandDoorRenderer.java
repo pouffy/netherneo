@@ -19,6 +19,6 @@ public class GrandDoorRenderer extends GeoBlockRenderer<GrandDoorBlockEntity> {
 
     @Override
     public AABB getRenderBoundingBox(GrandDoorBlockEntity blockEntity) {
-        return new AABB(blockEntity.getBlockPos()).inflate(3, 12, 3);
+        return new AABB(blockEntity.getBlockPos()).inflate(12);
     }
 }
