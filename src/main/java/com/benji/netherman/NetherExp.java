@@ -140,6 +140,45 @@ public class NetherExp {
     public static final DeferredItem<Item> L_PUZZLE_ITEM = ITEMS.register("l_puzzle",
             () -> new BlockItem(L_PUZZLE.get(), new Item.Properties()));
 
+    public static final DeferredBlock<Block> TOTEMUS_HOLE = BLOCKS.register("totemus_hole",
+            () -> new TotemusHoleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F)
+                    .noOcclusion()));
+
+    public static final DeferredItem<Item> TOTEMUS_HOLE_ITEM = ITEMS.register("totemus_hole",
+            () -> new BlockItem(TOTEMUS_HOLE.get(), new Item.Properties()));
+
+    //PUZZLE:
+    public static final DeferredBlock<Block> FACE_PUZZLE_RIGHT_DOWN = BLOCKS.register("face_puzzle_right_down",
+            () -> new FacePuzzleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion(), 2, NetherExp.FACE_PUZZLE_RIGHT_DOWN_BE));
+
+    public static final DeferredBlock<Block> FACE_PUZZLE_LEFT_UP = BLOCKS.register("face_puzzle_left_up",
+            () -> new FacePuzzleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion(), 2, NetherExp.FACE_PUZZLE_LEFT_UP_BE));
+
+    public static final DeferredBlock<Block> FACE_PUZZLE_RIGHT_UP = BLOCKS.register("face_puzzle_right_up",
+            () -> new FacePuzzleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion(), 3, NetherExp.FACE_PUZZLE_RIGHT_UP_BE));
+
+    public static final DeferredBlock<Block> FACE_PUZZLE_LEFT_DOWN = BLOCKS.register("face_puzzle_left_down",
+            () -> new FacePuzzleBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0F).requiresCorrectToolForDrops().noOcclusion(), 3, NetherExp.FACE_PUZZLE_LEFT_DOWN_BE));
+
+    public static final  DeferredItem<Item> FACE_PUZZLE_RIGHT_DOWN_ITEM = ITEMS.register("face_puzzle_right_down", () -> new BlockItem(FACE_PUZZLE_RIGHT_DOWN.get(), new Item.Properties()));
+    public static final  DeferredItem<Item> FACE_PUZZLE_LEFT_UP_ITEM = ITEMS.register("face_puzzle_left_up", () -> new BlockItem(FACE_PUZZLE_LEFT_UP.get(), new Item.Properties()));
+    public static final  DeferredItem<Item> FACE_PUZZLE_RIGHT_UP_ITEM = ITEMS.register("face_puzzle_right_up", () -> new BlockItem(FACE_PUZZLE_RIGHT_UP.get(), new Item.Properties()));
+    public static final  DeferredItem<Item> FACE_PUZZLE_LEFT_DOWN_ITEM = ITEMS.register("face_puzzle_left_down", () -> new BlockItem(FACE_PUZZLE_LEFT_DOWN.get(), new Item.Properties()));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FacePuzzleBlockEntity>> FACE_PUZZLE_RIGHT_DOWN_BE = BLOCK_ENTITIES.register("face_puzzle_right_down",
+            () -> BlockEntityType.Builder.of((pos, state) -> new FacePuzzleBlockEntity(NetherExp.FACE_PUZZLE_RIGHT_DOWN_BE.get(), pos, state), FACE_PUZZLE_RIGHT_DOWN.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FacePuzzleBlockEntity>> FACE_PUZZLE_LEFT_UP_BE = BLOCK_ENTITIES.register("face_puzzle_left_up",
+            () -> BlockEntityType.Builder.of((pos, state) -> new FacePuzzleBlockEntity(NetherExp.FACE_PUZZLE_LEFT_UP_BE.get(), pos, state), FACE_PUZZLE_LEFT_UP.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FacePuzzleBlockEntity>> FACE_PUZZLE_RIGHT_UP_BE = BLOCK_ENTITIES.register("face_puzzle_right_up",
+            () -> BlockEntityType.Builder.of((pos, state) -> new FacePuzzleBlockEntity(NetherExp.FACE_PUZZLE_RIGHT_UP_BE.get(), pos, state), FACE_PUZZLE_RIGHT_UP.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FacePuzzleBlockEntity>> FACE_PUZZLE_LEFT_DOWN_BE = BLOCK_ENTITIES.register("face_puzzle_left_down",
+            () -> BlockEntityType.Builder.of((pos, state) -> new FacePuzzleBlockEntity(NetherExp.FACE_PUZZLE_LEFT_DOWN_BE.get(), pos, state), FACE_PUZZLE_LEFT_DOWN.get()).build(null));
+
     public static final DeferredBlock<Block> SAMSONIT = BLOCKS.register("samsonit",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)
                     .strength(6.0F)
@@ -506,6 +545,23 @@ public class NetherExp {
             () -> new BlockItem(ENTRANCE.get(), new Item.Properties()));
 
 
+    public static final DeferredBlock<Block> MAZE_DOOR = BLOCKS.register("maze_door",
+            () -> new MazeDoorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS)
+                    .strength(20.0F)
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()));
+
+    public static final DeferredItem<Item> MAZE_DOOR_ITEM = ITEMS.register("maze_door",
+            () -> new GeoBlockItem(
+                    MAZE_DOOR.get(),
+                    new Item.Properties(),
+                     ResourceLocation.fromNamespaceAndPath(MODID, "geo/maze_door.geo.json"),
+                     ResourceLocation.fromNamespaceAndPath(MODID, "textures/block/maze_door.png"),
+                     ResourceLocation.fromNamespaceAndPath(MODID, "animations/maze_door.animation.json"),
+                     ResourceLocation.fromNamespaceAndPath(MODID, "textures/block/blackstone_column_emissive.png")
+            ));
+
+
     public static final DeferredBlock<Block> CRIMSON_WEB = BLOCKS.register("crimson_web",
             () -> new CrimsonWebBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_WART_BLOCK)
                     .instabreak()
@@ -711,7 +767,10 @@ public class NetherExp {
                     .craftRemainder(net.minecraft.world.item.Items.GLASS_BOTTLE)
                     .food(new net.minecraft.world.food.FoodProperties.Builder().nutrition(6).saturationModifier(0.1F).alwaysEdible().build())));
 
-    
+
+    public static final DeferredItem<Item> MAZE_KEY = ITEMS.register("maze_key",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GhastlyNestBlockEntity>> GHASTLY_NEST_BE = BLOCK_ENTITIES.register("ghastly_nest",
             () -> BlockEntityType.Builder.of(GhastlyNestBlockEntity::new, GHASTLY_NEST.get()).build(null));
 
@@ -721,6 +780,12 @@ public class NetherExp {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidNetherCornerBlockEntity>> VOIDCORNERNETHER_BE = BLOCK_ENTITIES.register("voidnether_corner",
             () -> BlockEntityType.Builder.of(VoidNetherCornerBlockEntity::new, VOIDCORNERNETHER.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MazeDoorBlockEntity>> MAZE_DOOR_BE = BLOCK_ENTITIES.register("maze_door",
+            () -> BlockEntityType.Builder.of(MazeDoorBlockEntity::new, MAZE_DOOR.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TotemusHoleBlockEntity>> TOTEMUS_HOLE_BE = BLOCK_ENTITIES.register("totemus_hole",
+            () -> BlockEntityType.Builder.of(TotemusHoleBlockEntity::new, TOTEMUS_HOLE.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<VoidNetherMidBlockEntity>> VOIDMIDNETHER_BE = BLOCK_ENTITIES.register("voidnether_mid",
             () -> BlockEntityType.Builder.of(VoidNetherMidBlockEntity::new, VOIDMIDNETHER.get()).build(null));
@@ -776,6 +841,12 @@ public class NetherExp {
                     .sized(3.0F, 4.5F) 
                     .fireImmune()
                     .build(ResourceLocation.fromNamespaceAndPath(MODID, "azazel").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<TotemusPuzzleEntity>> TOTEMUS_PUZZLE = ENTITIES.register("totemus_puzzle",
+            () -> EntityType.Builder.of(TotemusPuzzleEntity::new, MobCategory.MONSTER)
+                    .sized(0.5F, 2.25F)
+                    .fireImmune()
+                    .build(ResourceLocation.fromNamespaceAndPath(MODID, "totemus_puzzle").toString()));
 
 
     public static final DeferredHolder<EntityType<?>, EntityType<GildedGolemEntity>> GILDED_GOLEM = ENTITIES.register("gilded_golem",
@@ -1037,6 +1108,8 @@ public class NetherExp {
             event.accept(SAMSONIT_BELL_ITEM);
             event.accept(LOCKER_NETHER_ITEM);
             event.accept(SAMSONIT_KEY_ITEM);
+            event.accept(TOTEMUS_HOLE_ITEM);
+            event.accept(MAZE_DOOR_ITEM);
             event.accept(TOTEMUS_ITEM);
             event.accept(EYE_ITEM);
             event.accept(A_PUZZLE_ITEM);
@@ -1072,6 +1145,7 @@ public class NetherExp {
             event.accept(BELIEVER_SPAWN_EGG);
             event.accept(BLACKSMITH_SPAWN_EGG);
             event.accept(DOCTOR_SPAWN_EGG);
+            event.accept(MAZE_KEY);
             event.accept(BELIEVER_VILLAGER_SPAWN_EGG);
             event.accept(MANIPULATOR_SPAWN_EGG);
             event.accept(STATUE_BOSSUNIT_SPAWN_EGG);
@@ -1102,6 +1176,7 @@ public class NetherExp {
             event.put(AZAZEL_GUIDE_BOOK_ENTITY.get(), AzazelGuideBookEntity.createAttributes().build());
             event.put(GILDED_GOLEM.get(), GildedGolemEntity.createAttributes().build());
             event.put(AZAZEL.get(), AzazelEntity.createAttributes().build());
+            event.put(TOTEMUS_PUZZLE.get(), TotemusPuzzleEntity.createAttributes().build());
             event.put(LASER.get(), LaserEntity.createAttributes().build());
             event.put(STATUE_BOSSUNIT.get(), StatueBossunitEntity.createAttributes().build());
             event.put(BLACKSMITH.get(), BlacksmithEntity.createAttributes().build());
@@ -1164,10 +1239,16 @@ public class NetherExp {
             event.registerBlockEntityRenderer(TRAPHIVE_BE.get(), TraphiveRenderer::new);
             event.registerBlockEntityRenderer(EYE_BE.get(), EyeRenderer::new);
             event.registerBlockEntityRenderer(ALTAR_BE.get(), AltarRenderer::new);
+            event.registerBlockEntityRenderer(MAZE_DOOR_BE.get(), MazeDoorRenderer::new);
+            event.registerBlockEntityRenderer(FACE_PUZZLE_LEFT_DOWN_BE.get(), FacePuzzleLeftDownRenderer::new);
+            event.registerBlockEntityRenderer(FACE_PUZZLE_RIGHT_DOWN_BE.get(), FacePuzzleRightDownRenderer::new);
+            event.registerBlockEntityRenderer(FACE_PUZZLE_LEFT_UP_BE.get(), FacePuzzleLeftUpRenderer::new);
+            event.registerBlockEntityRenderer(FACE_PUZZLE_RIGHT_UP_BE.get(), FacePuzzleRightUpRenderer::new);
             event.registerBlockEntityRenderer(GRAND_DOOR_BE.get(), GrandDoorRenderer::new);
             event.registerBlockEntityRenderer(POINTED_BLACKSTONE_BE.get(), PointedBlackstoneRenderer::new);
             
             event.registerEntityRenderer(AZAZEL_GUIDE_BOOK_ENTITY.get(), AzazelGuideBookRenderer::new);
+            event.registerEntityRenderer(TOTEMUS_PUZZLE.get(), TotemusPuzzleRenderer::new);
             event.registerEntityRenderer(GILDED_GOLEM.get(), GildedGolemRenderer::new);
             event.registerEntityRenderer(CRIMSON_ARROW_ENTITY.get(), com.benji.netherman.client.renderer.entity.CrimsonArrowRenderer::new);
             event.registerEntityRenderer(AZAZEL.get(), AzazelRenderer::new);
