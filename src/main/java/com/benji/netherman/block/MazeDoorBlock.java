@@ -1,5 +1,6 @@
 package com.benji.netherman.block;
 
+import com.benji.netherman.ModSounds;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.block.entity.MazeDoorBlockEntity;
 import com.mojang.serialization.MapCodec;
@@ -81,7 +82,7 @@ public class MazeDoorBlock extends HorizontalDirectionalBlock implements EntityB
 
             if (!level.isClientSide()) {
                 boolean foundPuzzle = false;
-                int scanRadius = 5;
+                int scanRadius = 7;
 
                 for (BlockPos checkPos : BlockPos.betweenClosed(pos.offset(-scanRadius, -scanRadius, -scanRadius), pos.offset(scanRadius, scanRadius, scanRadius))) {
                     BlockState checkState = level.getBlockState(checkPos);
@@ -98,7 +99,7 @@ public class MazeDoorBlock extends HorizontalDirectionalBlock implements EntityB
                 if (foundPuzzle) {
                     if (stack.is(NetherExp.MAZE_KEY.get())) {
                         stack.shrink(1);
-                        level.playSound(null, pos, SoundEvents.UI_BUTTON_CLICK.value(), SoundSource.BLOCKS, 1.0F, 1.0F);
+                        level.playSound(null, pos, ModSounds.HIRRING.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
                         entity.openTemporary();
                     } else {
                         level.playSound(null, pos, SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 0.5F);
