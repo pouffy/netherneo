@@ -26,6 +26,8 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> FLASH = registerSoundEvent("flash");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> GIANT_BELL = registerSoundEvent("giant_bell");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TOTEMUS_PUZZLE = registerSoundEvent("totemus_puzzle");
+    public static final DeferredHolder<SoundEvent, SoundEvent> HIRRING = registerSoundEvent("hirring");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> SAMSONIT_BREAK = registerSoundEvent("block.samsonit.break");
     public static final DeferredHolder<SoundEvent, SoundEvent> SAMSONIT_STEP = registerSoundEvent("block.samsonit.step");
