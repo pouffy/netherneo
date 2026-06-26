@@ -63,6 +63,8 @@ import net.minecraft.world.entity.MobCategory;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import org.slf4j.Logger;
 
+import static com.benji.netherman.ModSounds.*;
+
 @Mod(NetherExp.MODID)
 public class NetherExp {
     public static final String MODID = "netherman";
@@ -839,7 +841,57 @@ public class NetherExp {
     public static final DeferredRegister<net.minecraft.world.item.crafting.RecipeSerializer<?>> RECIPE_SERIALIZERS =
             DeferredRegister.create(Registries.RECIPE_SERIALIZER, MODID);
 
-    
+    //DISCS:
+
+    public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.JukeboxSong> BOSS_SONG =
+            net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.JUKEBOX_SONG,
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "boss_fight"));
+
+    public static final DeferredItem<Item> MUSIC_DISC_BOSS = ITEMS.register("music_disc_boss",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .jukeboxPlayable(BOSS_SONG)));
+
+    public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.JukeboxSong> CAVE_AMBIENT =
+            net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.JUKEBOX_SONG,
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "cave_ambient"));
+
+    public static final DeferredItem<Item> MUSIC_DISC_QUAR = ITEMS.register("music_disc_quar",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .jukeboxPlayable(CAVE_AMBIENT)));
+
+    public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.JukeboxSong> CITY_AMBIENT =
+            net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.JUKEBOX_SONG,
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "city_ambient"));
+
+    public static final DeferredItem<Item> MUSIC_DISC_SACRED = ITEMS.register("music_disc_sacred",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .jukeboxPlayable(CITY_AMBIENT)));
+
+    public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.JukeboxSong> CHURCH_AMBIENT =
+            net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.JUKEBOX_SONG,
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "church_ambient"));
+
+    public static final DeferredItem<Item> MUSIC_DISC_AZAZEL = ITEMS.register("music_disc_azazel",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .jukeboxPlayable(CHURCH_AMBIENT)));
+
+    public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.JukeboxSong> MAZE_AMBIENT =
+            net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.JUKEBOX_SONG,
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(NetherExp.MODID, "maze_ambient"));
+
+    public static final DeferredItem<Item> MUSIC_DISC_MAZE = ITEMS.register("music_disc_maze",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .jukeboxPlayable(MAZE_AMBIENT)));
 
     public static final DeferredHolder<MobEffect, ManipulationEffect> MANIPULATION_EFFECT = EFFECTS.register("manipulation", ManipulationEffect::new);
     public static final DeferredHolder<MobEffect, ZoneEffect> FEAR_EFFECT = EFFECTS.register("fear", () -> new ZoneEffect(0x000000));
@@ -1179,6 +1231,11 @@ public class NetherExp {
         if (event.getTabKey() == CreativeModeTabs.COMBAT || event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(MANIPULATOR_STICK);
             event.accept(CRIMSON_ARROW_ITEM);
+            event.accept(MUSIC_DISC_AZAZEL);
+            event.accept(MUSIC_DISC_BOSS);
+            event.accept(MUSIC_DISC_QUAR);
+            event.accept(MUSIC_DISC_SACRED);
+            event.accept(MUSIC_DISC_MAZE);
             event.accept(CHANCE_TOTEM);
             event.accept(NOTE);
             event.accept(AZAZEL_GUIDE_BOOK_ITEM);

@@ -208,6 +208,18 @@
   "item.netherman.guardian_spawn_egg": "§6Gehinnom Spawn egg",
   "item.netherman.crimson_honey_bottle": "Crimson Honey Bottle",
 
+  "item.netherman.music_disc_boss": "§bMusic Disc",
+  "item.netherman.music_disc_quar": "§bMusic Disc",
+  "item.netherman.music_disc_sacred": "§bMusic Disc",
+  "item.netherman.music_disc_maze": "§bMusic Disc",
+  "item.netherman.music_disc_azazel": "§bMusic Disc",
+
+
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
 
   "effect.netherman.manipulation": "Manipulation",

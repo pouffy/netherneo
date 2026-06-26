@@ -206,6 +206,18 @@
   "item.netherman.guardian_spawn_egg": "§6ゲヒノムの守護者のスポーンエッグ",
   "item.netherman.crimson_honey_bottle": "深紅の蜂蜜瓶",
 
+  "item.netherman.music_disc_boss": "§b音楽ディスク",
+  "item.netherman.music_disc_azazel": "§b音楽ディスク",
+  "item.netherman.music_disc_quar": "§b音楽ディスク",
+  "item.netherman.music_disc_sacred": "§b音楽ディスク",
+  "item.netherman.music_disc_maze": "§b音楽ディスク",
+
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
+
   "effect.netherman.manipulation": "操り",
   "effect.netherman.fear": "恐怖？",
   "effect.netherman.alertness": "警戒？",

@@ -188,6 +188,19 @@
   "advancement.netherman.tame_ghastly.title": "Neuer Freund:D",
   "advancement.netherman.tame_ghastly.description": "Sind das Bienen?",
 
+  "item.netherman.music_disc_boss": "§bMusikscheibe",
+  "item.netherman.music_disc_quar": "§bMusikscheibe",
+  "item.netherman.music_disc_azazel": "§bMusikscheibe",
+  "item.netherman.music_disc_maze": "§bMusikscheibe",
+  "item.netherman.music_disc_sacred": "§bMusikscheibe",
+
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
+
+
   "item.netherman.manipulator_stick": "§4Stab der Manipulation",
   "item.netherman.crimson_arrow": "§4Purpurpfeil",
   "item.netherman.chance_totem": "§6Totem der Wiedergeburt",

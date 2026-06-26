@@ -207,7 +207,17 @@
   "item.netherman.guardian_spawn_egg": "§6Huevo de Guardia del Gehena",
   "item.netherman.crimson_honey_bottle": "Botella de miel carmesí",
 
+  "item.netherman.music_disc_boss": "§bDisco de música",
+  "item.netherman.music_disc_azazel": "§bDisco de música",
+  "item.netherman.music_disc_sacred": "§bDisco de música",
+  "item.netherman.music_disc_quar": "§bDisco de música",
+  "item.netherman.music_disc_maze": "§bDisco de música",
 
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "¿Manipulación?",
   "effect.netherman.fear": "¿Miedo?",

@@ -208,7 +208,17 @@
   "item.netherman.guardian_spawn_egg": "§6Trứng sinh ra Cai quản Gehinnom",
   "item.netherman.crimson_honey_bottle": "Chai nước mật đỏ thẫm",
 
+  "item.netherman.music_disc_boss": "§bĐĩa nhạc",
+  "item.netherman.music_disc_azazel": "§bĐĩa nhạc",
+  "item.netherman.music_disc_quar": "§bĐĩa nhạc",
+  "item.netherman.music_disc_sacred": "§bĐĩa nhạc",
+  "item.netherman.music_disc_maze": "§bĐĩa nhạc",
 
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "Thao túng",
   "effect.netherman.fear": "Nỗi sợ?",
