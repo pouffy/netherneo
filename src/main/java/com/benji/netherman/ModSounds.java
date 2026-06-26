@@ -38,7 +38,6 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent>  HIRRING = registerSoundEvent("hirring");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> BELL_BEAST_1 = registerSoundEvent("bell_beast1");
-    public static final DeferredHolder<SoundEvent, SoundEvent> BELL_BEAST_2 = registerSoundEvent("bell_beast2");
     public static final DeferredHolder<SoundEvent, SoundEvent> BELL_BEAST_3 = registerSoundEvent("bell_beast3");
     public static final DeferredHolder<SoundEvent, SoundEvent> BELL_BEAST_4 = registerSoundEvent("bell_beast4");
     public static final DeferredHolder<SoundEvent, SoundEvent> BELL_BEAST_5 = registerSoundEvent("bell_beast5");
