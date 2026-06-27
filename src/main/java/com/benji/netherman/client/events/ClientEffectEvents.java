@@ -59,11 +59,10 @@ public class ClientEffectEvents {
         
         BlockPos playerPos = player.blockPosition();
         BlockPos dangerPos = null;
-        outerLoop:
         for (BlockPos pos : BlockPos.betweenClosed(playerPos.offset(-10, -5, -10), playerPos.offset(10, 5, 10))) {
             if (player.level().getBlockState(pos).is(Blocks.LAVA) || player.level().getBlockState(pos).is(Blocks.FIRE)) {
                 dangerPos = pos.immutable();
-                break outerLoop;
+                break;
             }
         }
 

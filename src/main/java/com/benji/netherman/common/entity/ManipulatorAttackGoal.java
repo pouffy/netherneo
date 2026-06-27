@@ -1,6 +1,5 @@
 package com.benji.netherman.common.entity;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.init.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -77,7 +76,7 @@ public class ManipulatorAttackGoal extends Goal {
                 mob.manipulationCooldown = 1200;
 
                 
-                player.addEffect(new MobEffectInstance(ModEffects.MANIPULATION_EFFECT, 200, 0));
+                player.addEffect(new MobEffectInstance(ModEffects.MANIPULATION, 200, 0));
 
                 
                 mob.level().getServer().tell(new net.minecraft.server.TickTask(mob.level().getServer().getTickCount() + 35, () -> {

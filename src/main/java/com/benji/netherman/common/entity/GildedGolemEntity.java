@@ -130,7 +130,7 @@ public class GildedGolemEntity extends IronGolem implements GeoEntity {
                 for (BelieverEntity believer : believers) {
                     LivingEntity attacker = believer.getLastHurtByMob();
                     if (attacker != null && attacker.isAlive()) {
-                        if (this.creatorUUID != null && attacker.getUUID().equals(this.creatorUUID)) {
+                        if (attacker.getUUID().equals(this.creatorUUID)) {
                             continue;
                         }
                         this.setTarget(attacker);
@@ -152,7 +152,7 @@ public class GildedGolemEntity extends IronGolem implements GeoEntity {
         List<Player> players = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(10.0D));
 
         
-        players.removeIf(p -> p.isCreative() || p.isSpectator() || !p.isAlive() || (this.creatorUUID != null && p.getUUID().equals(this.creatorUUID)));
+        players.removeIf(p -> p.isCreative() || p.isSpectator() || !p.isAlive() || (p.getUUID().equals(this.creatorUUID)));
 
         
         if (items.isEmpty() && players.isEmpty()) {
@@ -200,12 +200,8 @@ public class GildedGolemEntity extends IronGolem implements GeoEntity {
             }
         }
 
-        
-        if (this.getHealth() >= this.getMaxHealth()) {
-            return false;
-        }
 
-        return true; 
+        return !(this.getHealth() >= this.getMaxHealth());
     }
 
     private void pullEntity(Entity entity) {
@@ -223,7 +219,7 @@ public class GildedGolemEntity extends IronGolem implements GeoEntity {
         boolean flag = super.doHurtTarget(entity);
         if (flag) {
             float upKnockback = 0.4F; 
-            entity.setDeltaMovement(entity.getDeltaMovement().add(0.0D, (double) upKnockback, 0.0D));
+            entity.setDeltaMovement(entity.getDeltaMovement().add(0.0D, upKnockback, 0.0D));
             this.playSound(SoundEvents.IRON_GOLEM_ATTACK, 1.0F, 1.0F);
         }
         return flag;

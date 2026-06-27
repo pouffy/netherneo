@@ -160,8 +160,7 @@ public class AltarBlock extends HorizontalDirectionalBlock implements EntityBloc
         if (letter == 1 && item == ModBlocks.A_PUZZLE.asItem()) return true;
         if (letter == 5 && item == ModBlocks.E_PUZZLE.asItem()) return true;
         if (letter == 12 && item == ModBlocks.L_PUZZLE.asItem()) return true;
-        if (letter == 26 && item == ModBlocks.Z_PUZZLE.asItem()) return true;
-        return false;
+        return letter == 26 && item == ModBlocks.Z_PUZZLE.asItem();
     }
 
     @Override
