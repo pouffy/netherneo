@@ -2,7 +2,6 @@ package com.benji.netherman.common.item;
 
 import com.benji.netherman.init.ModEffects;
 import com.benji.netherman.init.ModSounds;
-import com.benji.netherman.NetherExp;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
@@ -65,7 +64,7 @@ public class ManipulatorStickItem extends SwordItem {
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (!attacker.level().isClientSide()) {
             
-            target.addEffect(new MobEffectInstance(ModEffects.MANIPULATION_EFFECT, 600, 0));
+            target.addEffect(new MobEffectInstance(ModEffects.MANIPULATION, 600, 0));
             
             stack.hurtAndBreak(4, attacker, EquipmentSlot.MAINHAND);
         }
@@ -166,7 +165,7 @@ public class ManipulatorStickItem extends SwordItem {
             
             if (hitEntity != null) {
                 
-                hitEntity.addEffect(new MobEffectInstance(ModEffects.MANIPULATION_EFFECT, 600, 0));
+                hitEntity.addEffect(new MobEffectInstance(ModEffects.MANIPULATION, 600, 0));
 
                 
                 Vec3 pullVec = player.position().subtract(hitEntity.position()).normalize().scale(1.4D);

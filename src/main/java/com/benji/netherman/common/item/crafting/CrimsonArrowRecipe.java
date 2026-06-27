@@ -1,6 +1,5 @@
 package com.benji.netherman.common.item.crafting;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.init.ModItems;
 import com.benji.netherman.init.ModRecipeSerializers;
 import net.minecraft.core.HolderLookup;
@@ -82,6 +81,6 @@ public class CrimsonArrowRecipe extends CustomRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipeSerializers.CRIMSON_ARROW_CRAFTING.get();
+        return ModRecipeSerializers.CRIMSON_ARROW_COATING.get();
     }
 }

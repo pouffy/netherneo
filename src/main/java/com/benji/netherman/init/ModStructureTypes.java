@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModStructureTypes {
     public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, NetherExp.MODID);
 
-    public static final DeferredHolder<StructureType<?>, StructureType<MegaJigsawStructure>> MEGA_JIGSAW_STRUCTURE =
+    public static final DeferredHolder<StructureType<?>, StructureType<MegaJigsawStructure>> MEGA_JIGSAW =
             STRUCTURE_TYPES.register("mega_jigsaw", () -> () -> MegaJigsawStructure.CODEC);
 
     public static void init(IEventBus bus) {

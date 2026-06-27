@@ -2,7 +2,6 @@ package com.benji.netherman.common.block.entity;
 
 import com.benji.netherman.init.ModEffects;
 import com.benji.netherman.init.ModSounds;
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.block.TotemusBlock;
 import com.benji.netherman.init.ModBlockEntities;
 import com.benji.netherman.init.ModBlocks;
@@ -20,7 +19,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -85,15 +83,15 @@ public class TotemusBlockEntity extends BlockEntity {
             for (ServerPlayer player : players) {
 
                 if (entity.totemType == 3) {
-                    if (player.hasEffect(ModEffects.FEAR_EFFECT) ||
-                            player.hasEffect(ModEffects.EXCITEMENT_EFFECT) ||
-                            player.hasEffect(ModEffects.FAITH_EFFECT) ||
-                            player.hasEffect(ModEffects.ALERTNESS_EFFECT)) {
+                    if (player.hasEffect(ModEffects.FEAR) ||
+                            player.hasEffect(ModEffects.EXCITEMENT) ||
+                            player.hasEffect(ModEffects.FAITH) ||
+                            player.hasEffect(ModEffects.ALERTNESS)) {
 
-                        player.removeEffect(ModEffects.FEAR_EFFECT);
-                        player.removeEffect(ModEffects.EXCITEMENT_EFFECT);
-                        player.removeEffect(ModEffects.FAITH_EFFECT);
-                        player.removeEffect(ModEffects.ALERTNESS_EFFECT);
+                        player.removeEffect(ModEffects.FEAR);
+                        player.removeEffect(ModEffects.EXCITEMENT);
+                        player.removeEffect(ModEffects.FAITH);
+                        player.removeEffect(ModEffects.ALERTNESS);
 
                         level.playSound(null, player.blockPosition(), ModSounds.BIG_TEXT.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
 
@@ -106,17 +104,17 @@ public class TotemusBlockEntity extends BlockEntity {
                     }
                 } else {
                     Holder<MobEffect> targetEffect = switch (entity.totemType) {
-                        case 4 -> ModEffects.ALERTNESS_EFFECT;
-                        case 2 -> ModEffects.FAITH_EFFECT;
-                        case 1 -> ModEffects.EXCITEMENT_EFFECT;
-                        default -> ModEffects.FEAR_EFFECT;
+                        case 4 -> ModEffects.ALERTNESS;
+                        case 2 -> ModEffects.FAITH;
+                        case 1 -> ModEffects.EXCITEMENT;
+                        default -> ModEffects.FEAR;
                     };
 
                     if (!player.hasEffect(targetEffect)) {
-                        player.removeEffect(ModEffects.FEAR_EFFECT);
-                        player.removeEffect(ModEffects.EXCITEMENT_EFFECT);
-                        player.removeEffect(ModEffects.FAITH_EFFECT);
-                        player.removeEffect(ModEffects.ALERTNESS_EFFECT);
+                        player.removeEffect(ModEffects.FEAR);
+                        player.removeEffect(ModEffects.EXCITEMENT);
+                        player.removeEffect(ModEffects.FAITH);
+                        player.removeEffect(ModEffects.ALERTNESS);
 
                         player.addEffect(new MobEffectInstance(targetEffect, Integer.MAX_VALUE, 0, false, false, true));
 

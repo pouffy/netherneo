@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModRecipeSerializers {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, NetherExp.MODID);
 
-    public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<?>> CRIMSON_ARROW_CRAFTING =
+    public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<?>> CRIMSON_ARROW_COATING =
             RECIPE_SERIALIZERS.register("crimson_arrow_coating", () -> new SimpleCraftingRecipeSerializer<>(CrimsonArrowRecipe::new));
 
     public static void init(IEventBus bus) {

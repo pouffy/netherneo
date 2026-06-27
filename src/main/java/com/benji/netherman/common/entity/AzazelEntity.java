@@ -1,7 +1,6 @@
 package com.benji.netherman.common.entity;
 
 import com.benji.netherman.init.*;
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.config.AzazelConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
@@ -283,7 +282,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
         
         List<Player> nearbyPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
         for (Player p : nearbyPlayers) {
-            p.removeEffect(ModEffects.ANXIETY_EFFECT);
+            p.removeEffect(ModEffects.ANXIETY);
         }
     }
 
@@ -385,7 +384,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
 
                         List<Player> nearbyPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
                         for (Player p : nearbyPlayers) {
-                            p.removeEffect(ModEffects.ANXIETY_EFFECT);
+                            p.removeEffect(ModEffects.ANXIETY);
                         }
                     }
                 }
@@ -517,7 +516,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                     List<Player> auraPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
                     for (Player p : auraPlayers) {
                         
-                        p.addEffect(new MobEffectInstance(ModEffects.ANXIETY_EFFECT, 300, 0, false, false, true));
+                        p.addEffect(new MobEffectInstance(ModEffects.ANXIETY, 300, 0, false, false, true));
                     }
                 }
 

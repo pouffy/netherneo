@@ -28,11 +28,11 @@ public class ClientEffectEvents {
         if (event.getEntity() != Minecraft.getInstance().player) return;
         LocalPlayer player = (LocalPlayer) event.getEntity();
 
-        if (player.hasEffect(ModEffects.MANIPULATION_EFFECT)) {
+        if (player.hasEffect(ModEffects.MANIPULATION)) {
 
             
             if (whisperSound == null || whisperSound.isStopped()) {
-                whisperSound = new ZoneAmbientSoundInstance(ModSounds.WHISPER.get(), player, ModEffects.MANIPULATION_EFFECT, true);
+                whisperSound = new ZoneAmbientSoundInstance(ModSounds.WHISPER.get(), player, ModEffects.MANIPULATION, true);
                 Minecraft.getInstance().getSoundManager().play(whisperSound);
             }
 
@@ -54,7 +54,7 @@ public class ClientEffectEvents {
     @SubscribeEvent
     public static void onMovementInput(MovementInputUpdateEvent event) {
         LocalPlayer player = Minecraft.getInstance().player;
-        if (player == null || !player.hasEffect(ModEffects.MANIPULATION_EFFECT)) return;
+        if (player == null || !player.hasEffect(ModEffects.MANIPULATION)) return;
 
         
         BlockPos playerPos = player.blockPosition();

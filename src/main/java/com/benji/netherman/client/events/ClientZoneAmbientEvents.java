@@ -32,21 +32,21 @@ public class ClientZoneAmbientEvents {
         Holder<MobEffect> activeEffect = null;
 
 
-        if (player.hasEffect(ModEffects.ALERTNESS_EFFECT)) {
+        if (player.hasEffect(ModEffects.ALERTNESS)) {
             currentZoneType = 4;
-            activeEffect = ModEffects.ALERTNESS_EFFECT;
-        } else if (player.hasEffect(ModEffects.ANXIETY_EFFECT)) {
+            activeEffect = ModEffects.ALERTNESS;
+        } else if (player.hasEffect(ModEffects.ANXIETY)) {
             currentZoneType = 3;
-            activeEffect = ModEffects.ANXIETY_EFFECT;
-        } else if (player.hasEffect(ModEffects.FAITH_EFFECT)) {
+            activeEffect = ModEffects.ANXIETY;
+        } else if (player.hasEffect(ModEffects.FAITH)) {
             currentZoneType = 2;
-            activeEffect = ModEffects.FAITH_EFFECT;
-        } else if (player.hasEffect(ModEffects.EXCITEMENT_EFFECT)) {
+            activeEffect = ModEffects.FAITH;
+        } else if (player.hasEffect(ModEffects.EXCITEMENT)) {
             currentZoneType = 1;
-            activeEffect = ModEffects.EXCITEMENT_EFFECT;
-        } else if (player.hasEffect(ModEffects.FEAR_EFFECT)) {
+            activeEffect = ModEffects.EXCITEMENT;
+        } else if (player.hasEffect(ModEffects.FEAR)) {
             currentZoneType = 0;
-            activeEffect = ModEffects.FEAR_EFFECT;
+            activeEffect = ModEffects.FEAR;
         }
 
 

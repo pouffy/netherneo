@@ -1,6 +1,5 @@
 package com.benji.netherman.common.worldgen.structure;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.init.ModStructureTypes;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -76,6 +75,6 @@ public class MegaJigsawStructure extends Structure {
     @Override
     public StructureType<?> type() {
         
-        return ModStructureTypes.MEGA_JIGSAW_STRUCTURE.get();
+        return ModStructureTypes.MEGA_JIGSAW.get();
     }
 }

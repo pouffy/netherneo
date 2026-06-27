@@ -226,7 +226,7 @@ public class ManipulatorEntity extends Monster implements GeoEntity {
                 double x = Math.cos(rad) * 1.5;
                 double z = Math.sin(rad) * 1.5;
 
-                double yOffset = this.random.nextDouble() * 1.0;
+                double yOffset = this.random.nextDouble();
 
                 this.level().addParticle(DustParticleOptions.REDSTONE,
                         this.getX() + x, this.getY() + 0.1 + yOffset, this.getZ() + z,
