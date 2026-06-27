@@ -146,9 +146,12 @@
   "block.netherman.l_puzzle": "§6[ꖎ]",
   "block.netherman.altar": "Алтарь",
   "block.netherman.labyrinth_teleport": "Вратный Телепорт",
+  "block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
   "creativetab.netherman_tab": "Cult of Azazel",
 
+
+  "entity.netherman.bell_guardian": "Беллемот",
   "entity.netherman.welcomer": "Приветствующий",
   "entity.netherman.trader": "Багряный Торговец",
   "entity.netherman.gilded_golem": "Позолоченный голем",
@@ -173,6 +176,7 @@
 
   "block.netherman.totemus.arrived": "ТЫ ПРИБЫЛ",
   "block.netherman.totemus.zone": "ЗОНА",
+  "block.netherman.totemus.zone.maze": "ЛАБИРИНТ АЗАЗЕЛЯ",
   "block.netherman.totemus.zone.azazel": "ЛОГОВО АЗАЗЕЛЯ",
   "block.netherman.totemus.zone.city": "СВЯЩЕННЫЙ ГОРОД",
   "block.netherman.totemus.zone.quarries": "ПРОКЛЯТЫЕ КАМЕНОЛОМНИ",
@@ -204,11 +208,22 @@
   "item.netherman.guardian_spawn_egg": "§6Яйцо призыва Геенны",
   "item.netherman.crimson_honey_bottle": "Бутылка багряного мёда",
 
+  "item.netherman.music_disc_boss": "§bМузыкальный диск",
+  "item.netherman.music_disc_quar": "§bМузыкальный диск",
+  "item.netherman.music_disc_azazel": "§bМузыкальный диск",
+  "item.netherman.music_disc_maze": "§bМузыкальный диск",
+  "item.netherman.music_disc_sacred": "§bМузыкальный диск",
 
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "Манипуляция",
   "effect.netherman.fear": "Страх?",
   "effect.netherman.faith": "Вера?",
+  "effect.netherman.alertness": "Бдительность?",
   "effect.netherman.anxiety": "Не бойся",
   "effect.netherman.excitement": "Волнение?"
 }

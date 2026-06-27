@@ -32,7 +32,10 @@ public class ClientZoneAmbientEvents {
         Holder<MobEffect> activeEffect = null;
 
 
-        if (player.hasEffect(ModEffects.ANXIETY_EFFECT)) {
+        if (player.hasEffect(ModEffects.ALERTNESS_EFFECT)) {
+            currentZoneType = 4;
+            activeEffect = ModEffects.ALERTNESS_EFFECT;
+        } else if (player.hasEffect(ModEffects.ANXIETY_EFFECT)) {
             currentZoneType = 3;
             activeEffect = ModEffects.ANXIETY_EFFECT;
         } else if (player.hasEffect(ModEffects.FAITH_EFFECT)) {
@@ -79,6 +82,7 @@ public class ClientZoneAmbientEvents {
                 } else {
 
                     var soundEvent = switch (currentZoneType) {
+                        case 4 -> ModSounds.MAZE_AMBIENT.get();
                         case 2 -> ModSounds.CHURCH_AMBIENT.get();
                         case 1 -> ModSounds.CITY_AMBIENT.get();
                         default -> ModSounds.CAVE_AMBIENT.get();

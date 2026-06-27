@@ -145,9 +145,12 @@
   "block.netherman.l_puzzle": "§6[ꖎ]",
   "block.netherman.altar": "Bàn thờ",
   "block.netherman.labyrinth_teleport": "Máy dịch chuyển cổng",
+  "block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
   "creativetab.netherman_tab": "Cult of Azazel",
-  
+
+
+  "entity.netherman.bell_guardian": "Bellemoth",
   "entity.netherman.welcomer": "Người đón tiếp",
   "entity.netherman.trader": "Người trao đổi",
   "entity.netherman.gilded_golem": "Người mạ vàng",
@@ -172,6 +175,7 @@
 
   "block.netherman.totemus.arrived": "NGƯƠI ĐÃ ĐẾN RỒI!",
   "block.netherman.totemus.zone": "KHU VỰC",
+  "block.netherman.totemus.zone.maze": "MA CUNG AZAZEL",
   "block.netherman.totemus.zone.azazel": "CẤM ĐỊA AZAZEL",
   "block.netherman.totemus.zone.city": "MA THẦN VƯƠNG ĐÔ",
   "block.netherman.totemus.zone.quarries": "OÁN THẠCH QUẬT",
@@ -204,11 +208,22 @@
   "item.netherman.guardian_spawn_egg": "§6Trứng sinh ra Cai quản Gehinnom",
   "item.netherman.crimson_honey_bottle": "Chai nước mật đỏ thẫm",
 
+  "item.netherman.music_disc_boss": "§bĐĩa nhạc",
+  "item.netherman.music_disc_azazel": "§bĐĩa nhạc",
+  "item.netherman.music_disc_quar": "§bĐĩa nhạc",
+  "item.netherman.music_disc_sacred": "§bĐĩa nhạc",
+  "item.netherman.music_disc_maze": "§bĐĩa nhạc",
 
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "Thao túng",
   "effect.netherman.fear": "Nỗi sợ?",
   "effect.netherman.faith": "Niềm tin?",
+  "effect.netherman.alertness": "Cảnh giác?",
   "effect.netherman.anxiety": "Bất cẩn",
   "effect.netherman.excitement": "Hứng thú?"
 }

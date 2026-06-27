@@ -145,9 +145,11 @@
   "block.netherman.l_puzzle": "§6[ꖎ]",
   "block.netherman.altar": "祭坛",
   "block.netherman.labyrinth_teleport": "传送门传送器",
+  "block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
   "creativetab.netherman_tab": "Cult of Azazel",
 
+  "entity.netherman.bell_guardian": "钟蛾魔",
   "entity.netherman.welcomer": "迎接者",
   "entity.netherman.trader": "商人",
   "entity.netherman.gilded_golem": "镀金傀儡",
@@ -172,6 +174,7 @@
 
   "block.netherman.totemus.arrived": "你已抵达",
   "block.netherman.totemus.zone": "区域",
+  "block.netherman.totemus.zone.maze": "阿撒泻勒迷宫",
   "block.netherman.totemus.zone.azazel": "阿撒兹勒的巢穴",
   "block.netherman.totemus.zone.city": "神圣之城",
   "block.netherman.totemus.zone.quarries": "被诅咒的采石场",
@@ -204,9 +207,22 @@
   "item.netherman.guardian_spawn_egg": "§6欣嫩子谷守卫刷怪蛋",
   "item.netherman.crimson_honey_bottle": "猩红蜂蜜瓶",
 
+  "item.netherman.music_disc_boss": "§b音乐唱片",
+  "item.netherman.music_disc_azazel": "§b音乐唱片",
+  "item.netherman.music_disc_quar": "§b音乐唱片",
+  "item.netherman.music_disc_sacred": "§b音乐唱片",
+  "item.netherman.music_disc_maze": "§b音乐唱片",
+
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
+
   "effect.netherman.manipulation": "操纵",
   "effect.netherman.fear": "恐惧？",
   "effect.netherman.faith": "信仰？",
+  "effect.netherman.alertness": "警觉？",
   "effect.netherman.anxiety": "不要害怕",
   "effect.netherman.excitement": "兴奋？"
 }

@@ -123,6 +123,11 @@ public class ModEntities {
                     .fireImmune()
                     .build("totemus_puzzle"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<BellGuardianEntity>> BELL_GUARDIAN = ENTITIES.register("bell_guardian",
+            () -> EntityType.Builder.of(BellGuardianEntity::new, MobCategory.MONSTER)
+                    .sized(0.6F, 1.8F)
+                    .build(NetherExp.location("bell_guardian").toString()));
+
     public static void init(IEventBus bus) {
         ENTITIES.register(bus);
     }

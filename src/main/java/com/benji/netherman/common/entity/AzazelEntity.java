@@ -443,7 +443,9 @@ public class AzazelEntity extends Monster implements GeoEntity {
 
                                 ItemStack[] loot = new ItemStack[] {
                                         new ItemStack(ModItems.MANIPULATOR_STICK.get(), 1),
-                                        new ItemStack(ModItems.CHANCE_TOTEM.get(), 2),
+                                        new ItemStack(ModItems.CHANCE_TOTEM.get(), 2), new ItemStack(ModItems.MUSIC_DISC_AZAZEL.get(), 1),
+                                        new ItemStack(ModItems.MUSIC_DISC_AZAZEL.get(), 1),
+                                        new ItemStack(ModItems.MUSIC_DISC_BOSS.get(), 1),
                                         new ItemStack(Items.TOTEM_OF_UNDYING, 1),
                                         new ItemStack(ModItems.NOTE.get(), 1),
                                         new ItemStack(ModBlocks.AZAZEL_TROPHY.get(), 1),

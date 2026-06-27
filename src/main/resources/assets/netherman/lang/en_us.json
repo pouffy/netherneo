@@ -90,7 +90,9 @@
   "tooltip.netherman.chance_totem.spawnpoint": "spawnpoint",
   "tooltip.netherman.chance_totem.line1": "Teleports to the %s after fatal hit",
   "tooltip.netherman.chance_totem.line2": "[SHIFT+RMB] - summon Gehinnom",
+  "block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
+  "entity.netherman.bell_guardian": "Bellemoth",
   "entity.netherman.welcomer": "Welcomer",
   "entity.netherman.believer_villager": "Preacher",
   "entity.netherman.trader": "Trader",
@@ -115,6 +117,7 @@
 
   "block.netherman.totemus.arrived": "YOU ARRIVED",
   "block.netherman.totemus.zone": "ZONE",
+  "block.netherman.totemus.zone.maze": "AZAZEL MAZE",
   "block.netherman.totemus.zone.azazel": "AZAZELS LAIR",
   "block.netherman.totemus.zone.city": "THE SACRED CITY",
   "block.netherman.totemus.zone.quarries": "THE CURSED QUARRIES",
@@ -205,11 +208,23 @@
   "item.netherman.guardian_spawn_egg": "§6Gehinnom Spawn egg",
   "item.netherman.crimson_honey_bottle": "Crimson Honey Bottle",
 
+  "item.netherman.music_disc_boss": "§bMusic Disc",
+  "item.netherman.music_disc_quar": "§bMusic Disc",
+  "item.netherman.music_disc_sacred": "§bMusic Disc",
+  "item.netherman.music_disc_maze": "§bMusic Disc",
+  "item.netherman.music_disc_azazel": "§bMusic Disc",
 
+
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "Manipulation",
   "effect.netherman.fear": "Fear?",
   "effect.netherman.faith": "Faith?",
+  "effect.netherman.alertness": "Alertness?",
   "effect.netherman.anxiety": "Don't be afraid",
   "effect.netherman.excitement": "Excitement?"
 }

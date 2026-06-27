@@ -102,6 +102,7 @@ public class CommonEvents {
         event.put(ModEntities.TOTEMUS_PUZZLE.get(), TotemusPuzzleEntity.createAttributes().build());
         event.put(ModEntities.GILDED_GOLEM.get(), GildedGolemEntity.createAttributes().build());
         event.put(ModEntities.AZAZEL.get(), AzazelEntity.createAttributes().build());
+        event.put(ModEntities.BELL_GUARDIAN.get(), BellGuardianEntity.createAttributes().build());
         event.put(ModEntities.LASER.get(), LaserEntity.createAttributes().build());
         event.put(ModEntities.STATUE_BOSSUNIT.get(), StatueBossunitEntity.createAttributes().build());
         event.put(ModEntities.BLACKSMITH.get(), BlacksmithEntity.createAttributes().build());

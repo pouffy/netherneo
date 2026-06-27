@@ -132,9 +132,12 @@
   "block.netherman.l_puzzle": "§6[ꖎ]",
   "block.netherman.altar": "Altar",
   "block.netherman.labyrinth_teleport": "Teletransportador de portal",
+  "block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
   "creativetab.netherman_tab": "Cult of Azazel",
 
+
+  "entity.netherman.bell_guardian": "Bellemoth",
   "entity.netherman.welcomer": "Saudador",
   "entity.netherman.trader": "Mercador",
   "entity.netherman.gilded_golem": "Golem Dourado",
@@ -159,9 +162,11 @@
 
   "block.netherman.totemus.arrived": "VOCÊ CHEGOU",
   "block.netherman.totemus.zone": "ZONA",
+  "block.netherman.totemus.zone.maze": "LABIRINTO DE AZAZEL",
   "block.netherman.totemus.zone.azazel": "O COVIL DE AZAZEL",
   "block.netherman.totemus.zone.city": "A CIDADE SAGRADA",
   "block.netherman.totemus.zone.quarries": "AS PEDREIRAS MALDITAS",
+
   "block.netherman.grand_door_part": "Parte do grande portão",
   "tooltip.netherman.compass": "Ajuda a encontrar estruturas do mod",
   "tooltip.netherman.guide": "Guia",
@@ -203,11 +208,22 @@
   "item.netherman.guardian_spawn_egg": "§6Ovo Gerador de Geena",
   "item.netherman.crimson_honey_bottle": "Frasco de Mel Carmesim",
 
+  "item.netherman.music_disc_boss": "§bDisco de música",
+  "item.netherman.music_disc_azazel": "§bDisco de música",
+  "item.netherman.music_disc_sacred": "§bDisco de música",
+  "item.netherman.music_disc_quar": "§bDisco de música",
+  "item.netherman.music_disc_maze": "§bDisco de música",
 
+  "jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+  "jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+  "jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
 
   "effect.netherman.manipulation": "Manipulação",
   "effect.netherman.fear": "Medo?",
   "effect.netherman.faith": "Fé?",
+  "effect.netherman.alertness": "Alerta?",
   "effect.netherman.anxiety": "Não temas",
   "effect.netherman.excitement": "Entusiasmo?"
 }

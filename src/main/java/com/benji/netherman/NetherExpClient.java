@@ -44,6 +44,7 @@ public class NetherExpClient {
         BlockEntityRenderers.register(ModBlockEntities.VOIDMIDCORNERNETHER.get(), VoidNetherMidCornerRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.VOIDCORNERNETHER.get(), VoidNetherCornerRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.VOIDMIDNETHER.get(), VoidNetherMidRenderer::new);
+        BlockEntityRenderers.register(ModBlockEntities.SAMSONITE_BELL.get(), SamsoniteBellRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.TRAPHIVE.get(), TraphiveRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.EYE.get(), EyeRenderer::new);
         BlockEntityRenderers.register(ModBlockEntities.ALTAR.get(), AltarRenderer::new);
@@ -87,6 +88,7 @@ public class NetherExpClient {
         event.registerEntityRenderer(ModEntities.WELCOMER.get(), WelcomerRenderer::new);
         event.registerEntityRenderer(ModEntities.GUARDIAN.get(), GuardianRenderer::new);
         event.registerEntityRenderer(ModEntities.GHASTLY.get(), GhastlyRenderer::new);
+        event.registerEntityRenderer(ModEntities.BELL_GUARDIAN.get(), BellGuardianRenderer::new);
     }
 
     public void registerGuiOverlays(RegisterGuiLayersEvent event) {

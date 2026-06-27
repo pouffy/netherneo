@@ -65,6 +65,9 @@ public class ModBlockEntities {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TotemusHoleBlockEntity>> TOTEMUS_HOLE = BLOCK_ENTITIES.register("totemus_hole",
             () -> BlockEntityType.Builder.of(TotemusHoleBlockEntity::new, ModBlocks.TOTEMUS_HOLE.get()).build(null));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SamsoniteBellBlockEntity>> SAMSONITE_BELL = BLOCK_ENTITIES.register("samsonite_bell",
+            () -> BlockEntityType.Builder.of(SamsoniteBellBlockEntity::new, ModBlocks.SAMSONITE_BELL.get()).build(null));
+
     public static void init(IEventBus bus) {
         BLOCK_ENTITIES.register(bus);
     }

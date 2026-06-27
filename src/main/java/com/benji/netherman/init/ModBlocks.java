@@ -9,11 +9,13 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.util.DeferredSoundType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Collection;
@@ -162,7 +164,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .noOcclusion()), new Item.Properties());
 
-    public static final DeferredBlock<Block> SAMSONIT_EYE = register("samsonit_eye", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)
+    public static final DeferredBlock<Block> SAMSONIT_EYE = register("samsonit_eye", () -> new SamsonitEyeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)
                     .strength(6.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SAMSONIT_SOUNDS)), new Item.Properties());
@@ -375,6 +377,16 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .noOcclusion(),
             3, ModBlockEntities.FACE_PUZZLE_LEFT_DOWN), new Item.Properties());
+
+    public static final DeferredBlock<Block> SAMSONITE_BELL = register("samsonite_bell",
+            () -> new SamsoniteBellBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BELL)), new Item.Properties());
+
+    public static final DeferredBlock<Block> LABYRINTH_BELLSPAWN = register("labyrinth_bellspawn",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)
+                    .lightLevel(state -> 15)
+                    .requiresCorrectToolForDrops()
+                    .strength(20.0F)
+                    .noOcclusion()), new Item.Properties());
 
     public static final DeferredBlock<Block> MAZE_DOOR = registerSpecialItem("maze_door", () -> new MazeDoorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS)
                     .strength(20.0F)

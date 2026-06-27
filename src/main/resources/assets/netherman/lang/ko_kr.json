@@ -87,9 +87,11 @@
 	"block.netherman.l_puzzle": "§6[ꖎ]",
 	"block.netherman.altar": "제단",
 	"block.netherman.labyrinth_teleport": "게이트 텔레포터",
+	"block.netherman.labyrinth_bellspawn": "Gate Teleporter",
 
 	"creativetab.netherman_tab": "아자젤 교단",
 
+	"entity.netherman.bell_guardian": "벨러모스",
 	"entity.netherman.welcomer": "환영자",
 	"entity.netherman.believer_villager": "설교자",
 	"entity.netherman.trader": "상인",
@@ -114,6 +116,7 @@
 
 	"block.netherman.totemus.arrived": "도착했습니다",
 	"block.netherman.totemus.zone": "구역",
+	"block.netherman.totemus.zone.maze": "아자젤의 미로",
 	"block.netherman.totemus.zone.azazel": "아자젤의 소굴",
 	"block.netherman.totemus.zone.city": "성스러운 도시",
 	"block.netherman.totemus.zone.quarries": "저주받은 채석장",
@@ -203,9 +206,22 @@
 	"item.netherman.guardian_spawn_egg": "§6게힌놈 생성 알",
 	"item.netherman.crimson_honey_bottle": "진홍빛 꿀 병",
 
+	"item.netherman.music_disc_boss": "§b음악 디스크",
+	"item.netherman.music_disc_quar": "§b음악 디스크",
+	"item.netherman.music_disc_sacred": "§b음악 디스크",
+	"item.netherman.music_disc_maze": "§b음악 디스크",
+	"item.netherman.music_disc_azazel": "§b음악 디스크",
+
+	"jukebox_song.netherman.boss_fight": "Toby Fox - GUARDIAN",
+	"jukebox_song.netherman.cave_ambient": "Casmox - §kGUARDIAN",
+	"jukebox_song.netherman.city_ambient": "Casmox - §kGUARDIAN",
+	"jukebox_song.netherman.maze_ambient": "Casmox - §kGUARDIAN",
+	"jukebox_song.netherman.church_ambient": "Casmox - §kGUARDIAN",
+
 	"effect.netherman.manipulation": "조종",
 	"effect.netherman.fear": "공포?",
 	"effect.netherman.faith": "신앙?",
+	"effect.netherman.alertness": "경계?",
 	"effect.netherman.anxiety": "두려워하지 마라",
 	"effect.netherman.excitement": "흥분?"
 }

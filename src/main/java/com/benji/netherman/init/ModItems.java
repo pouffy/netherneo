@@ -3,10 +3,13 @@ package com.benji.netherman.init;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.item.*;
 import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.JukeboxSong;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
@@ -65,6 +68,13 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZAZEL_SPAWN_EGG = registerSpawnEgg("azazel", ModEntities.AZAZEL);
 
+    public static final DeferredItem<Item> MUSIC_DISC_BOSS = registerMusicDisc("boss", ModJukeboxSongs.BOSS_SONG);
+    public static final DeferredItem<Item> MUSIC_DISC_QUAR = registerMusicDisc("quar", ModJukeboxSongs.CAVE_AMBIENT);
+    public static final DeferredItem<Item> MUSIC_DISC_SACRED = registerMusicDisc("sacred", ModJukeboxSongs.CITY_AMBIENT);
+    public static final DeferredItem<Item> MUSIC_DISC_AZAZEL = registerMusicDisc("azazel", ModJukeboxSongs.CHURCH_AMBIENT);
+    public static final DeferredItem<Item> MUSIC_DISC_MAZE = registerMusicDisc("maze", ModJukeboxSongs.MAZE_AMBIENT);
+
+
     private static DeferredItem<Item> registerSimple(String name, Item.Properties itemProperties) {
         return register(name, () -> new Item(itemProperties));
     }
@@ -75,6 +85,14 @@ public class ModItems {
 
     private static DeferredItem<Item> registerSpawnEgg(String id, Supplier<? extends EntityType<? extends Mob>> type) {
         return register(id + "_spawn_egg", () -> new DeferredSpawnEggItem(type, 0xFFFFFF, 0xFFFFFF, new Item.Properties()));
+    }
+
+    private static DeferredItem<Item> registerMusicDisc(String id, ResourceKey<JukeboxSong> song) {
+        return register("music_disc_" + id, () -> new Item(new Item.Properties()
+                .stacksTo(1)
+                .rarity(Rarity.RARE)
+                .jukeboxPlayable(song)
+        ));
     }
 
     private static <T extends Item> DeferredItem<T> register(String id, Supplier<T> pIProp) {
