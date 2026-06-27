@@ -49,9 +49,11 @@ import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.EnumSet;
 import java.util.List;
 
+@ParametersAreNonnullByDefault
 public class AzazelEntity extends Monster implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
@@ -281,7 +283,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
         
         List<Player> nearbyPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
         for (Player p : nearbyPlayers) {
-            p.removeEffect(NetherExp.ANXIETY_EFFECT);
+            p.removeEffect(ModEffects.ANXIETY_EFFECT);
         }
     }
 
@@ -383,7 +385,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
 
                         List<Player> nearbyPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
                         for (Player p : nearbyPlayers) {
-                            p.removeEffect(NetherExp.ANXIETY_EFFECT);
+                            p.removeEffect(ModEffects.ANXIETY_EFFECT);
                         }
                     }
                 }
@@ -515,7 +517,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                     List<Player> auraPlayers = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(100.0D));
                     for (Player p : auraPlayers) {
                         
-                        p.addEffect(new MobEffectInstance(NetherExp.ANXIETY_EFFECT, 300, 0, false, false, true));
+                        p.addEffect(new MobEffectInstance(ModEffects.ANXIETY_EFFECT, 300, 0, false, false, true));
                     }
                 }
 
@@ -619,7 +621,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                             net.minecraft.core.BlockPos pos = new net.minecraft.core.BlockPos(this.prisonCenter.getX() + x, this.prisonCenter.getY() + currentYOffset, this.prisonCenter.getZ() + z);
 
                             if (serverLevel.getBlockState(pos).canBeReplaced()) {
-                                serverLevel.setBlockAndUpdate(pos, NetherExp.BLACKSTONE_COLUMN.get().defaultBlockState());
+                                serverLevel.setBlockAndUpdate(pos, ModBlocks.BLACKSTONE_COLUMN.get().defaultBlockState());
                                 this.prisonBlocks.add(pos);
                                 serverLevel.sendParticles(ParticleTypes.REVERSE_PORTAL, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 5, 0.2, 0.2, 0.2, 0.02);
                             }
@@ -643,7 +645,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                             if (Math.round(Math.sqrt(x * x + z * z)) == radius) {
                                 net.minecraft.core.BlockPos pos = new net.minecraft.core.BlockPos(this.prisonCenter.getX() + x, buildY, this.prisonCenter.getZ() + z);
                                 if (serverLevel.getBlockState(pos).canBeReplaced()) {
-                                    serverLevel.setBlockAndUpdate(pos, NetherExp.GRAND_DOOR_PART.get().defaultBlockState());
+                                    serverLevel.setBlockAndUpdate(pos, ModBlocks.GRAND_DOOR_PART.get().defaultBlockState());
                                     this.prisonBlocks.add(pos);
                                     serverLevel.sendParticles(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 2, 0.2, 0.2, 0.2, 0.0);
                                 }
@@ -659,10 +661,10 @@ public class AzazelEntity extends Monster implements GeoEntity {
         for (net.minecraft.core.BlockPos pos : this.prisonBlocks) {
             net.minecraft.world.level.block.state.BlockState state = level.getBlockState(pos);
 
-            if (state.getBlock() == NetherExp.BLACKSTONE_COLUMN.get() || state.getBlock() == NetherExp.GRAND_DOOR_PART.get()) {
+            if (state.getBlock() == ModBlocks.BLACKSTONE_COLUMN.get() || state.getBlock() == ModBlocks.GRAND_DOOR_PART.get()) {
                 level.setBlock(pos, net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 3);
 
-                if (state.getBlock() == NetherExp.BLACKSTONE_COLUMN.get()) {
+                if (state.getBlock() == ModBlocks.BLACKSTONE_COLUMN.get()) {
                     level.levelEvent(2001, pos, net.minecraft.world.level.block.Block.getId(state));
                 }
             }
@@ -700,7 +702,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                         double angle = (2 * Math.PI / Math.max(1, bossUnitCount)) * i;
                         double offsetX = Math.cos(angle) * 4.0D;
                         double offsetZ = Math.sin(angle) * 4.0D;
-                        StatueBossunitEntity unit = NetherExp.STATUE_BOSSUNIT.get().create(serverLevel);
+                        StatueBossunitEntity unit = ModEntities.STATUE_BOSSUNIT.get().create(serverLevel);
                         if (unit != null) {
                             unit.setPos(this.getX() + offsetX, this.getY(), this.getZ() + offsetZ);
                             serverLevel.addFreshEntity(unit);
@@ -716,7 +718,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                         double offsetX = Math.cos(angle) * 4.0D;
                         double offsetZ = Math.sin(angle) * 4.0D;
 
-                        GuardianEntity guardian = NetherExp.GUARDIAN.get().create(serverLevel);
+                        GuardianEntity guardian = ModEntities.GUARDIAN.get().create(serverLevel);
                         if (guardian != null) {
                             guardian.moveTo(this.getX() + offsetX, this.getY(), this.getZ() + offsetZ, this.getYRot(), 0);
                             if (currentTarget != null) guardian.setTarget(currentTarget);
@@ -942,7 +944,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                     double offsetX = Math.cos(angle) * radius;
                     double offsetZ = Math.sin(angle) * radius;
 
-                    LaserEntity laser = NetherExp.LASER.get().create(serverLevel);
+                    LaserEntity laser = ModEntities.LASER.get().create(serverLevel);
                     if (laser != null) {
                         laser.setPos(this.getX() + offsetX, this.getY(), this.getZ() + offsetZ);
                         serverLevel.addFreshEntity(laser);
@@ -961,7 +963,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
 
             if (spawnBossUnits) {
                 for (int i = 0; i < 2; i++) {
-                    StatueBossunitEntity unit = NetherExp.STATUE_BOSSUNIT.get().create(serverLevel);
+                    StatueBossunitEntity unit = ModEntities.STATUE_BOSSUNIT.get().create(serverLevel);
                     if (unit != null) {
                         unit.setPos(this.getX() + (this.random.nextDouble() - 0.5) * 10, this.getY(), this.getZ() + (this.random.nextDouble() - 0.5) * 10);
                         serverLevel.addFreshEntity(unit);
@@ -969,7 +971,7 @@ public class AzazelEntity extends Monster implements GeoEntity {
                 }
             } else {
                 for (int i = 0; i < 4; i++) {
-                    StatueEntity statue = NetherExp.STATUE.get().create(serverLevel);
+                    StatueEntity statue = ModEntities.STATUE.get().create(serverLevel);
                     if (statue != null) {
                         statue.setPos(this.getX() + (this.random.nextDouble() - 0.5) * 10, this.getY(), this.getZ() + (this.random.nextDouble() - 0.5) * 10);
                         serverLevel.addFreshEntity(statue);

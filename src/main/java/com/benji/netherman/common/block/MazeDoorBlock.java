@@ -142,7 +142,7 @@ public class MazeDoorBlock extends HorizontalDirectionalBlock implements EntityB
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return type == NetherExp.MAZE_DOOR_BE.get() ?
+        return type == ModBlockEntities.MAZE_DOOR.get() ?
                 (lvl, p, st, be) -> MazeDoorBlockEntity.tick(lvl, p, st, (MazeDoorBlockEntity) be) : null;
     }
 
