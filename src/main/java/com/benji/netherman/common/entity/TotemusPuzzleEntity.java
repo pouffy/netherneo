@@ -1,7 +1,7 @@
 package com.benji.netherman.common.entity;
 
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.block.entity.TotemusHoleBlockEntity;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;

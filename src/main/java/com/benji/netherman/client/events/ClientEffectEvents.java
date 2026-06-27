@@ -1,20 +1,20 @@
 package com.benji.netherman.client.events;
 
 import com.benji.netherman.NetherExp;
+import com.benji.netherman.client.sound.ZoneAmbientSoundInstance;
 import com.benji.netherman.init.ModEffects;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
-import com.benji.netherman.init.ModSounds;
-import com.benji.netherman.client.sound.ZoneAmbientSoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.neoforge.client.event.MovementInputUpdateEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.MovementInputUpdateEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 @EventBusSubscriber(modid = NetherExp.MODID, value = Dist.CLIENT)
 public class ClientEffectEvents {

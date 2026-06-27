@@ -1,6 +1,5 @@
 package com.benji.netherman.common.block;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.entity.BellGuardianEntity;
 import com.benji.netherman.init.ModBlocks;
 import com.benji.netherman.init.ModEntities;

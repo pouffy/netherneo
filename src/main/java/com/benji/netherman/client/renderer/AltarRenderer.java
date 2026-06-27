@@ -1,9 +1,9 @@
 package com.benji.netherman.client.renderer;
 
 import com.benji.netherman.NetherExp;
-import com.benji.netherman.common.block.entity.AltarBlockEntity;
 import com.benji.netherman.client.layer.GenericEmissiveLayer;
 import com.benji.netherman.client.model.AltarModel;
+import com.benji.netherman.common.block.entity.AltarBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.AABB;

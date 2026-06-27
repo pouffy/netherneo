@@ -1,11 +1,11 @@
 package com.benji.netherman.events;
 
-import com.benji.netherman.init.ModBlocks;
-import com.benji.netherman.init.ModItems;
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.network.TotemAnimationPayload;
 import com.benji.netherman.config.AzazelConfig;
+import com.benji.netherman.init.ModBlocks;
+import com.benji.netherman.init.ModItems;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;

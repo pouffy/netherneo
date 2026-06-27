@@ -5,7 +5,6 @@ import com.benji.netherman.client.ClientFogHandler;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record FogSyncS2CPacket(boolean isInside) implements CustomPacketPayload {

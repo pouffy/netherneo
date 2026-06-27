@@ -1,10 +1,10 @@
 package com.benji.netherman.common.block.entity;
 
-import com.benji.netherman.init.ModEffects;
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.block.TotemusBlock;
 import com.benji.netherman.init.ModBlockEntities;
 import com.benji.netherman.init.ModBlocks;
+import com.benji.netherman.init.ModEffects;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;

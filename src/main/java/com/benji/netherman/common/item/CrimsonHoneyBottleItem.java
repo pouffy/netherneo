@@ -1,6 +1,5 @@
 package com.benji.netherman.common.item;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.init.ModBlocks;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;

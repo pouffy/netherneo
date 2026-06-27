@@ -1,9 +1,8 @@
 package com.benji.netherman.common.block.entity;
 
+import com.benji.netherman.common.block.FacePuzzleBlock;
 import com.benji.netherman.init.ModItems;
 import com.benji.netherman.init.ModSounds;
-import com.benji.netherman.NetherExp;
-import com.benji.netherman.common.block.FacePuzzleBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.particles.ParticleTypes;
@@ -11,7 +10,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;

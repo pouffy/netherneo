@@ -1,11 +1,10 @@
 package com.benji.netherman.client.renderer;
 
 import com.benji.netherman.NetherExp;
-import com.benji.netherman.common.block.entity.VoidNetherMidCornerBlockEntity;
 import com.benji.netherman.client.layer.GenericEmissiveLayer;
 import com.benji.netherman.client.model.VoidNetherMidCornerModel;
+import com.benji.netherman.common.block.entity.VoidNetherMidCornerBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.AABB;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 

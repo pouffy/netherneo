@@ -5,7 +5,6 @@ import com.benji.netherman.client.layer.GuardianEmissiveLayer;
 import com.benji.netherman.client.model.GuardianModel;
 import com.benji.netherman.common.entity.GuardianEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 public class GuardianRenderer extends GeoEntityRenderer<GuardianEntity> {

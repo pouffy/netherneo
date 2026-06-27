@@ -3,7 +3,6 @@ package com.benji.netherman.init;
 import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.entity.*;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;

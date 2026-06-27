@@ -1,9 +1,9 @@
 package com.benji.netherman.common.block;
 
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.block.entity.GrandDoorBlockEntity;
 import com.benji.netherman.init.ModBlockEntities;
 import com.benji.netherman.init.ModBlocks;
+import com.benji.netherman.init.ModSounds;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

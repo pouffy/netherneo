@@ -1,7 +1,7 @@
 package com.benji.netherman.common.entity;
 
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.block.entity.GrandDoorBlockEntity;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;

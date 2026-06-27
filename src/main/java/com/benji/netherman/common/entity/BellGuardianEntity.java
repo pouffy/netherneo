@@ -1,6 +1,5 @@
 package com.benji.netherman.common.entity;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.block.entity.MazeDoorBlockEntity;
 import com.benji.netherman.init.ModBlocks;
 import com.benji.netherman.init.ModSounds;

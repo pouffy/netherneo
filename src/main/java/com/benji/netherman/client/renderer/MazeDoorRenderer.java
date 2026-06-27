@@ -1,8 +1,8 @@
 package com.benji.netherman.client.renderer;
 
 import com.benji.netherman.NetherExp;
-import com.benji.netherman.common.block.entity.MazeDoorBlockEntity;
 import com.benji.netherman.client.model.MazeDoorModel;
+import com.benji.netherman.common.block.entity.MazeDoorBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;

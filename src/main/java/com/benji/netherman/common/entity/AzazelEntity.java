@@ -1,7 +1,7 @@
 package com.benji.netherman.common.entity;
 
-import com.benji.netherman.init.*;
 import com.benji.netherman.config.AzazelConfig;
+import com.benji.netherman.init.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;

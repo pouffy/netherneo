@@ -1,11 +1,10 @@
 package com.benji.netherman.common.block.entity;
 
+import com.benji.netherman.common.entity.TotemusPuzzleEntity;
 import com.benji.netherman.init.ModBlockEntities;
 import com.benji.netherman.init.ModEntities;
 import com.benji.netherman.init.ModItems;
 import com.benji.netherman.init.ModSounds;
-import com.benji.netherman.NetherExp;
-import com.benji.netherman.common.entity.TotemusPuzzleEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.particles.ParticleTypes;

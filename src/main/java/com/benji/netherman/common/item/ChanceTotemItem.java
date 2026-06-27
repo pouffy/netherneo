@@ -1,6 +1,5 @@
 package com.benji.netherman.common.item;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.entity.GuardianEntity;
 import com.benji.netherman.common.network.TotemAnimationPayload;
 import com.benji.netherman.init.ModEntities;

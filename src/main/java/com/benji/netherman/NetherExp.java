@@ -3,12 +3,12 @@ package com.benji.netherman;
 import com.benji.netherman.common.network.ModMessages;
 import com.benji.netherman.config.AzazelConfig;
 import com.benji.netherman.init.*;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import org.jetbrains.annotations.Contract;
 import org.slf4j.Logger;
 

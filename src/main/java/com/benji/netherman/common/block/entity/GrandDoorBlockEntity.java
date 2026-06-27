@@ -1,9 +1,9 @@
 package com.benji.netherman.common.block.entity;
 
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.block.GrandDoorBlock;
 import com.benji.netherman.init.ModBlockEntities;
 import com.benji.netherman.init.ModBlocks;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;

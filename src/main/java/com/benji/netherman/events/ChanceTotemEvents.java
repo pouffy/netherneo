@@ -1,9 +1,9 @@
 package com.benji.netherman.events;
 
-import com.benji.netherman.init.ModItems;
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.common.compat.CuriosCompat;
 import com.benji.netherman.common.network.TotemAnimationPayload;
+import com.benji.netherman.init.ModItems;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;

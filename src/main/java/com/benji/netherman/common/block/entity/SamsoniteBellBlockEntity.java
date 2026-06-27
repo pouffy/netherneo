@@ -1,6 +1,5 @@
 package com.benji.netherman.common.block.entity;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.entity.BellGuardianEntity;
 import com.benji.netherman.init.ModBlockEntities;
 import net.minecraft.core.BlockPos;

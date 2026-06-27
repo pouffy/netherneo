@@ -1,17 +1,17 @@
 package com.benji.netherman.client.events;
 
 import com.benji.netherman.NetherExp;
-import com.benji.netherman.init.ModSounds;
 import com.benji.netherman.client.sound.ZoneAmbientSoundInstance;
 import com.benji.netherman.init.ModEffects;
+import com.benji.netherman.init.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 @EventBusSubscriber(modid = NetherExp.MODID, value = Dist.CLIENT)
 public class ClientZoneAmbientEvents {

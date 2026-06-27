@@ -1,6 +1,5 @@
 package com.benji.netherman.common.item;
 
-import com.benji.netherman.NetherExp;
 import com.benji.netherman.common.entity.AzazelGuideBookEntity;
 import com.benji.netherman.init.ModEntities;
 import net.minecraft.ChatFormatting;

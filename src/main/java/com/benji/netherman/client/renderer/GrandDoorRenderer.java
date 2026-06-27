@@ -5,7 +5,6 @@ import com.benji.netherman.client.layer.GenericEmissiveLayer;
 import com.benji.netherman.client.model.GrandDoorModel;
 import com.benji.netherman.common.block.entity.GrandDoorBlockEntity;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.AABB;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
